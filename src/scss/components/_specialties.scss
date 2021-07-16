@@ -1,0 +1,28 @@
+.specialties {
+  &__container {
+  }
+
+  &__list {
+    padding-left: 25px;
+  }
+
+  &__item {
+    list-style: disc outside;
+  }
+
+  &__link {
+    color: var(--color-coral-red);
+
+    &:hover {
+      color: var(--color-scarlet);
+    }
+  }
+
+  &__sublist {
+    padding-left: 25px;
+  }
+
+  &__subitem {
+    list-style: circle outside;
+  }
+}
