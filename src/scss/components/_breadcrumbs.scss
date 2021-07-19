@@ -1,0 +1,42 @@
+.breadcrumbs {
+  background-color: var(--color-haiti);
+  padding: 40px 0;
+
+  &__container {
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 13px;
+    line-height: 16px;
+
+    &:not(:last-child) {
+      padding-right: 33px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 13px;
+        height: 13px;
+        background: url('../img/long-arrow-alt-right-solid--white.svg') center
+          center no-repeat;
+      }
+    }
+  }
+
+  &__link {
+    color: var(--color-white);
+    font-weight: 600;
+
+    &:hover {
+      color: #ccccd1;
+    }
+  }
+}

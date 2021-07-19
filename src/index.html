@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,45 +7,11 @@
   <title>Positions</title>
 
   <link rel="stylesheet" href="css/main.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="container header__container">
-        <a href="#" class="header__logo logo">
-          <img src="img/logo.svg" alt="">
-        </a>
-        <nav class="header__nav header-nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a href="#" class="header-nav__link">
-                Vacant Positions
-              </a>
-            </li>
-            <li class="header-nav__item">
-              <a href="#" class="header-nav__link">
-                Programs
-              </a>
-            </li>
-            <li class="header-nav__item">
-              <a href="#" class="header-nav__link">
-                Content Hub
-              </a>
-            </li>
-            <li class="header-nav__item">
-              <a href="#" class="header-nav__link">
-                Sign In
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <a href="#" class="header__get-started">
-          Get Started
-        </a>
-      </div>
-    </header>
+    @include('html/header.html')
 
     <div class="home-hero">
       <div class="container home-hero__container">

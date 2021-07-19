@@ -1,4 +1,6 @@
 .specialties {
+  padding: 60px 0;
+
   &__container {
   }
 
@@ -8,6 +10,14 @@
 
   &__item {
     list-style: disc outside;
+
+    a {
+      color: var(--color-coral-red);
+
+      &:hover {
+        color: var(--color-scarlet);
+      }
+    }
   }
 
   &__link {
@@ -24,5 +34,25 @@
 
   &__subitem {
     list-style: circle outside;
+  }
+
+  .cat-item {
+    list-style: disc outside;
+
+    a {
+      color: var(--color-coral-red);
+
+      &:hover {
+        color: var(--color-scarlet);
+      }
+    }
+
+    ul.children {
+      padding-left: 25px;
+
+      li.cat-item {
+        list-style: circle outside;
+      }
+    }
   }
 }
