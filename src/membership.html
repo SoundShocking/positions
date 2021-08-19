@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positions</title>
+
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('html/header.html')
+
+    <div class="choose-plan">
+      <div class="container choose-plan__container">
+        <h1 class="choose-plan__title">
+          Choose a Plan
+        </h1>
+      </div>
+    </div>
+
+    <section class="plans">
+      <div class="container plans__container">
+        <div class="plans__grid">
+          <div class="plans__item plan">
+            <div class="plan__title">
+              Premium Monthly
+            </div>
+
+            <div class="plan__price">
+              $29
+            </div>
+
+            <div class="plan__description">
+              Unlimited access to vacant positions, website features and content.
+            </div>
+
+            <a href="#" class="plan__link">
+              Choose Plan
+            </a>
+
+            <div class="plan__note">
+              * Standard monthly subscription
+            </div>
+          </div>
+
+          <div class="plans__item plan">
+            <div class="plan__title">
+              Premium Quarterly
+            </div>
+
+            <div class="plan__price">
+              $79
+            </div>
+
+            <div class="plan__description">
+              Unlimited access to vacant positions, website features and content.
+            </div>
+
+            <a href="#" class="plan__link">
+              Choose Plan
+            </a>
+
+            <div class="plan__note">
+              * Save & have enough time to hit the spot
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans-benefits">
+      <div class="container plans-benefits__container">
+        <h2 class="plans-benefits__title">
+          All premium plans include a full suite of benefits.
+        </h2>
+
+        <div class="plans-benefits__grid">
+          <div class="plans-benefits__item">
+            <div class="plans-benefits__icon">
+              <svg>
+                <use xlink:href="img/sprite.svg#chart-line-solid"></use>
+              </svg>
+            </div>
+
+            <div class="plans-benefits__text">
+              Get full access to most up-to-date open positions
+            </div>
+          </div>
+
+          <div class="plans-benefits__item">
+            <div class="plans-benefits__icon">
+              <svg>
+                <use xlink:href="img/sprite.svg#mountain-solid"></use>
+              </svg>
+            </div>
+
+            <div class="plans-benefits__text">
+              Explore organized listings that are easy to search
+            </div>
+          </div>
+
+          <div class="plans-benefits__item">
+            <div class="plans-benefits__icon">
+              <svg>
+                <use xlink:href="img/sprite.svg#trophy-solid"></use>
+              </svg>
+            </div>
+
+            <div class="plans-benefits__text">
+              Contact information is included for all listings
+            </div>
+          </div>
+
+          <div class="plans-benefits__item">
+            <div class="plans-benefits__icon">
+              <svg>
+                <use xlink:href="img/sprite.svg#star-half-alt-solid"></use>
+              </svg>
+            </div>
+
+            <div class="plans-benefits__text">
+              No contracts, cancel or resubscribe anytime
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer"></footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
