@@ -1,0 +1,143 @@
+.page-template-about {
+  background-color: var(--color-white);
+}
+
+.about-us {
+  padding: 64px 0;
+  background-color: var(--color-white);
+
+  &__container {
+    max-width: 760px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: var(--color-text-info);
+    font-weight: 600;
+  }
+
+  &__title {
+    margin: 8px 0 0;
+    font-size: 42px;
+    line-height: 55px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--color-text-muted);
+    font-weight: 300;
+  }
+}
+
+.about-steps {
+  background-color: var(--color-purple-hearth);
+  padding: 160px 0 100px;
+  clip-path: ellipse(150% 100% at 50% 100%);
+
+  &__container {
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg,
+    img {
+      display: block;
+      width: 32px;
+      height: 32px;
+      color: var(--color-purple-hearth);
+    }
+  }
+
+  &__title {
+    margin-top: 32px;
+    color: var(--color-white);
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-top: 8px;
+    color: var(--color-white);
+    line-height: 24px;
+  }
+}
+
+.about-text {
+  padding: 64px 0;
+  color: var(--color-text-muted);
+
+  &__container {
+  }
+
+  &__link {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      color: var(--color-white);
+      font-weight: 700;
+      border-radius: 4px;
+      background-color: var(--color-btn-success);
+      transition: background 0.3s;
+      padding: 0 75px;
+
+      &:hover {
+        background-color: var(--color-btn-success-hover);
+      }
+    }
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: var(--color-black);
+  }
+
+  p {
+  }
+
+  ul {
+    padding-left: 40px;
+    margin-bottom: 16px;
+
+    li {
+      list-style: disc outside;
+    }
+  }
+
+  ol {
+    padding-left: 40px;
+    margin-bottom: 16px;
+
+    li {
+      list-style: decimal outside;
+    }
+  }
+}

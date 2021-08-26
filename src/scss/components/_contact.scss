@@ -1,0 +1,107 @@
+.page-template-contact {
+  background-color: var(--color-white);
+}
+
+.contact-page-header {
+  background-color: var(--color-grape);
+  padding: 80px 0 160px;
+  clip-path: ellipse(100% 100% at 50% 0);
+
+  &__container {
+  }
+
+  &__title {
+    font-size: 56px;
+    line-height: 60px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  &__subtitle {
+    margin-top: 16px;
+    color: var(--color-white);
+    text-align: center;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+  }
+}
+
+.contact-form {
+  &__container {
+    max-width: 800px;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    background-color: var(--color-white);
+    padding: 64px;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__text {
+    margin-top: 16px;
+    color: var(--color-text-muted);
+    text-align: center;
+  }
+
+  &__form {
+    margin-top: 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 10px;
+  }
+
+  &__control {
+    position: relative;
+
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      grid-column: 1/3;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    padding: 0 16px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #59536d;
+
+    &:focus {
+      border-color: #ffc3b8;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(255, 89, 56, 0.25);
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 48px;
+    line-height: 24px;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: 10px 16px;
+    resize: vertical;
+    color: #59536d;
+
+    &:focus {
+      border-color: #ffc3b8;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(255, 89, 56, 0.25);
+    }
+  }
+}
