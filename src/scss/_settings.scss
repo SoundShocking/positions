@@ -89,6 +89,10 @@ input {
 
 .main {
   flex: 1 0 auto;
+
+  &__page {
+    padding-bottom: 80px;
+  }
 }
 
 .stop-scroll {
