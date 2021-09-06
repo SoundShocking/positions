@@ -8,12 +8,12 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 8fr 4fr;
+    grid-template-columns: 1fr 360px;
     gap: 30px;
     align-items: start;
   }
 
-  &__content {
+  &__description {
     h2 {
       margin: 0 0 8px;
       font-size: 32px;
@@ -33,6 +33,19 @@
         border-bottom: 1px solid rgba(38, 31, 68, 0.125);
       }
     }
+
+    a {
+      border-bottom: 1px solid currentColor;
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--color-black);
+      }
+    }
+  }
+
+  &__description {
+    color: var(--color-text-muted);
   }
 
   &__stats {
@@ -106,6 +119,8 @@
 
     &-right {
       padding-left: 5px;
+      text-align: right;
+      color: var(--color-text-muted);
     }
   }
 

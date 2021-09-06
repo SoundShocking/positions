@@ -161,12 +161,14 @@
 
     img {
       display: block;
-      max-height: 70px;
+      max-height: 80px;
+      width: auto;
     }
   }
 
   &__info {
     font-size: 12px;
+    color: var(--color-text-muted);
   }
 
   &__institution-name {
