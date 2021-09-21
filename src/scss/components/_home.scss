@@ -3,6 +3,18 @@
   background: url('../img/home-hero_bg.jpg') center center no-repeat / cover;
   position: relative;
 
+  @include md {
+    height: auto;
+    padding: 75px 0;
+  }
+
+  @include sm {
+    padding: 0;
+    height: calc(100vh - 75px);
+    min-height: 400px;
+    max-height: 600px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -11,6 +23,10 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+
+    @include sm {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
   }
 
   &__container {
@@ -22,7 +38,11 @@
   }
 
   &__content {
-    max-width: 50%;
+    max-width: 550px;
+
+    @include lg {
+      max-width: none;
+    }
   }
 
   &__title {
@@ -31,6 +51,16 @@
     color: var(--color-white);
     font-weight: 700;
     margin: 0;
+
+    @include md {
+      font-size: 48px;
+      line-height: 1.3;
+    }
+
+    @include sm {
+      font-size: 32px;
+      line-height: 1.4;
+    }
   }
 
   &__text {
@@ -40,6 +70,15 @@
     margin-top: 16px;
     color: var(--color-white);
     padding-right: 100px;
+
+    @include lg {
+      padding-right: 0;
+    }
+
+    @include sm {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   &__link {
@@ -63,12 +102,21 @@
 }
 
 .discover {
+  margin-top: 80px;
+
+  @include md {
+    margin-top: 50px;
+  }
+
   &__container {
-    padding-top: 80px;
   }
 
   &__content {
-    max-width: 50%;
+    max-width: 550px;
+
+    @include lg {
+      max-width: none;
+    }
   }
 
   &__subtitle {
@@ -83,6 +131,11 @@
     font-size: 42px;
     font-weight: 700;
     line-height: 55px;
+
+    @include sm {
+      font-size: 32px;
+      line-height: 1.3;
+    }
   }
 
   &__text {
@@ -90,6 +143,12 @@
     font-weight: 300;
     line-height: 32px;
     margin-top: 8px;
+    color: var(--color-text-muted);
+
+    @include sm {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   &__grid {
@@ -97,13 +156,38 @@
     grid-template-columns: repeat(12, 1fr);
     margin-top: 64px;
     align-items: start;
+
+    @include lg {
+      grid-template-columns: 6fr 6fr;
+      background: url('../img/discover_bg.jpg') center center no-repeat / cover;
+      padding: 50px 15px;
+    }
+
+    @include md {
+      margin-top: 50px;
+    }
+
+    @include sm {
+      margin-top: 40px;
+      background: none;
+      display: block;
+      padding: 0 15px;
+    }
   }
 
   &__left {
     grid-column: span 9;
 
+    @include lg {
+      grid-column: unset;
+    }
+
     img {
       display: block;
+
+      @include lg {
+        display: none;
+      }
     }
   }
 
@@ -117,6 +201,20 @@
     box-shadow: 0 0.5rem 1rem rgba(38, 31, 68, 0.15);
     margin-top: -600px;
 
+    @include lg {
+      grid-row: unset;
+      grid-column: unset;
+      margin-top: 0;
+    }
+
+    @include md {
+      padding: 20px;
+    }
+
+    @include sm {
+      padding: 20px 15px;
+    }
+
     &-title {
       font-weight: 400;
       color: var(--color-black);
@@ -128,6 +226,11 @@
     &-text {
       margin-top: 32px;
       line-height: 25px;
+      color: var(--color-text-muted);
+
+      @include sm {
+        margin-top: 20px;
+      }
     }
 
     &-link {
@@ -150,14 +253,19 @@
 }
 
 .preview-positions {
-  padding-top: 100px;
+  margin-top: 100px;
+  scroll-margin-top: 75px;
+
+  @include lg {
+    margin-top: 50px;
+  }
 
   &__container {
   }
 
   &__header {
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 750px;
     text-align: center;
   }
 
@@ -173,13 +281,24 @@
     font-weight: 700;
     margin: 8px 0 0;
     color: var(--color-black);
+
+    @include sm {
+      font-size: 32px;
+      line-height: 1.3;
+    }
   }
 
   &__text {
     margin-top: 8px;
     color: #6f6985;
     font-size: 20px;
+    line-height: 32px;
     font-weight: 300;
+
+    @include sm {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   &__grid {
@@ -188,6 +307,11 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: start;
+
+    @include sm {
+      margin-top: 40px;
+      grid-template-columns: 1fr;
+    }
 
     &-title {
       font-size: 12px;
@@ -209,6 +333,14 @@
   &__right {
     background-color: var(--color-white);
     padding: 32px;
+
+    @include lg {
+      padding: 20px;
+    }
+
+    @include sm {
+      padding: 20px 15px;
+    }
   }
 
   &__left {
@@ -225,6 +357,10 @@
 
   &__item {
     padding: 32px 0;
+
+    @include lg {
+      padding: 20px 0;
+    }
 
     &:not(:last-child) {
       border-bottom: 2px solid #eae9ec;
@@ -249,6 +385,7 @@
 
   &__description {
     margin-top: 8px;
+    filter: blur(6px);
   }
 
   &__bottom {
@@ -256,6 +393,16 @@
     display: grid;
     grid-template-columns: 5fr 7fr;
     gap: 30px;
+
+    @include lg {
+      grid-template-columns: 6fr 6fr;
+      gap: 20px;
+    }
+
+    @include md {
+      grid-template-columns: 5fr 7fr;
+      gap: 15px;
+    }
   }
 
   &__institution {
@@ -263,10 +410,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      max-height: 80px;
 
       img {
-        max-height: 70px;
+        max-height: 100%;
         max-width: 100%;
+        height: auto;
+        width: auto;
+        display: block;
       }
     }
 
@@ -282,14 +433,24 @@
     span {
       font-size: 12px;
       margin-top: 8px;
+      color: var(--color-text-muted);
     }
   }
 }
 
 .home-stats {
-  // height: 625px;
+  margin-top: 64px;
   background: url('../img/home-stats_bg.jpg') center center no-repeat / cover;
   position: relative;
+  padding: 80px 0;
+
+  @include lg {
+    padding: 50px 0;
+  }
+
+  @include md {
+    margin-top: 50px;
+  }
 
   &::before {
     content: '';
@@ -303,8 +464,6 @@
 
   &__container {
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
   }
 
   &__subtitle {
@@ -320,6 +479,7 @@
     line-height: 55px;
     color: var(--color-text-light);
     text-align: center;
+    font-weight: 700;
   }
 
   &__grid {
@@ -327,6 +487,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+
+    @include md {
+      margin-top: 40px;
+    }
+
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__item {
@@ -337,11 +505,19 @@
     color: var(--color-text-light);
     line-height: 26px;
 
+    @include lg {
+      padding: 0 15px;
+    }
+
+    @include md {
+      padding: 0;
+    }
+
     span {
-      font-size: 700px;
       font-size: 32px;
+      font-weight: 700;
       color: var(--color-text-light);
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
   }
 
@@ -359,6 +535,15 @@
     transition: background 0.3s;
     border-radius: 4px;
 
+    @include lg {
+      margin-top: 50px;
+    }
+
+    @include md {
+      max-width: none;
+      margin-top: 40px;
+    }
+
     &:hover {
       background-color: #e9a90a;
     }
@@ -366,9 +551,13 @@
 }
 
 .never-miss {
+  margin-top: 100px;
+
+  @include md {
+    margin-top: 50px;
+  }
+
   &__container {
-    padding-top: 100px;
-    padding-bottom: 60px;
   }
 
   &__content {
@@ -389,6 +578,11 @@
     line-height: 55px;
     color: var(--color-black);
     font-weight: 700;
+
+    @include sm {
+      font-size: 32px;
+      line-height: 1.3;
+    }
   }
 
   &__text {
@@ -396,6 +590,12 @@
     font-size: 20px;
     line-height: 32px;
     font-weight: 300;
+    color: var(--color-text-muted);
+
+    @include sm {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 
   &__grid {
@@ -404,6 +604,14 @@
     gap: 30px;
     margin-top: 60px;
     align-items: start;
+
+    @include md {
+      margin-top: 40px;
+    }
+
+    @include md {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -414,6 +622,14 @@
 .never-miss-review {
   padding: 48px;
 
+  @include lg {
+    padding: 20px;
+  }
+
+  @include md {
+    padding: 20px 15px;
+  }
+
   &__quote {
     font-style: italic;
     font-weight: 700;
@@ -421,8 +637,12 @@
   }
 
   &__text {
-    margin-top: 32px;
     line-height: 26px;
+    color: var(--color-text-muted);
+
+    @include md {
+      line-height: 24px;
+    }
   }
 
   &__name {
@@ -432,12 +652,9 @@
     line-height: 20px;
   }
 
-  &__state {
+  &__location {
     font-size: 12px;
     margin-top: 5px;
+    color: var(--color-text-muted);
   }
-}
-
-.footer {
-  height: 500px;
 }

@@ -2,11 +2,15 @@
   background-color: var(--color-grape);
   padding: 60px 0;
 
+  @include md {
+    padding: 40px 0;
+  }
+
   &__container {
   }
 
   &__content {
-    max-width: 70%;
+    max-width: 750px;
     margin: 0 auto;
   }
 
@@ -17,6 +21,16 @@
     line-height: 60px;
     color: var(--color-white);
     margin: 0;
+
+    @include md {
+      font-size: 48px;
+      line-height: 1.3;
+    }
+
+    @include sm {
+      font-size: 32px;
+      line-height: 1.4;
+    }
   }
 
   &__subtitle {
@@ -26,24 +40,39 @@
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
     margin-top: 16px;
+
+    @include sm {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 }
 
 .positions {
-  padding: 60px 0;
+  margin-top: 60px;
+
+  @include sm {
+    margin-top: 50px;
+  }
 
   &__container {
     display: grid;
-    grid-template-columns: 3fr 9fr;
+    grid-template-columns: 270px 1fr;
     gap: 30px;
     align-items: start;
+
+    @include md {
+      grid-template-columns: 220px 1fr;
+      gap: 20px;
+    }
+
+    @include sm {
+      grid-template-columns: 100%;
+      gap: 30px;
+    }
   }
 
   &__filter {
-    padding: 20px;
-    border: 1px solid #eae9ec;
-    background-color: var(--color-white);
-    border-radius: 4px;
   }
 
   &__content {
@@ -55,15 +84,27 @@
   &__item {
     &:not(:last-child) {
       margin-bottom: 32px;
+
+      @include md {
+        margin-bottom: 20px;
+      }
     }
   }
 }
 
 .positions-filter {
-  &__group {
-    padding-bottom: 16px;
+  padding: 20px;
+  border: 1px solid #eae9ec;
+  background-color: var(--color-white);
+  border-radius: 4px;
 
+  @include md {
+    padding: 20px 15px;
+  }
+
+  &__group {
     &:not(:last-child) {
+      padding-bottom: 16px;
       margin-bottom: 16px;
       border-bottom: 1px solid rgba(38, 31, 68, 0.1);
     }
@@ -103,6 +144,10 @@
   border-top: 1px solid var(--color-grape);
   border-radius: 0 0 5px 5px;
 
+  @include md {
+    padding: 20px 15px;
+  }
+
   &__specialization {
     font-size: 14px;
     color: var(--color-purple-hearth);
@@ -132,9 +177,26 @@
     display: grid;
     grid-template-columns: 6fr 3fr 3fr;
     gap: 30px;
+
+    @include lg {
+      grid-template-columns: 4fr 4fr 4fr;
+    }
+
+    @include md {
+      grid-template-columns: auto 3fr 4fr;
+    }
+
+    @include sm {
+      grid-template-columns: 5fr 7fr;
+      gap: 15px;
+    }
   }
 
   &__link {
+    @include sm {
+      grid-column: span 2;
+    }
+
     a {
       height: 32px;
       display: inline-flex;
@@ -159,10 +221,15 @@
     justify-content: flex-end;
     align-items: center;
 
+    @include md {
+      justify-content: center;
+    }
+
     img {
       display: block;
       max-height: 80px;
       width: auto;
+      height: auto;
     }
   }
 
@@ -173,10 +240,57 @@
 
   &__institution-name {
     font-size: 16px;
-    line-height: 21px;
+    line-height: 20px;
     color: var(--color-black);
     font-weight: 700;
     margin-bottom: 5px;
     letter-spacing: -0.03rem;
+  }
+}
+
+.positions-active-filter {
+  margin-bottom: 20px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 4px;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 15px;
+    padding: 6px 20px 6px 8px;
+    color: var(--color-white);
+    background-color: #ff5938;
+    font-weight: 500;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      width: 12px;
+      height: 12px;
+      transform: translateY(-50%);
+      background: url('../img/times-solid--white.svg') center no-repeat;
+    }
+  }
+
+  &__clear {
+    color: var(--color-black);
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 500;
   }
 }

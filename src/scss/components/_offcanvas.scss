@@ -1,0 +1,84 @@
+.offcanvas-menu {
+  &__list {
+  }
+
+  &__item {
+    padding: 12px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-gray);
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--color-black);
+    font-weight: 700;
+    display: inline-block;
+
+    &--get-started {
+      color: var(--color-white);
+      height: 32px;
+      padding: 0 15px;
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--color-btn-success);
+      border-radius: 4px;
+    }
+  }
+}
+
+.offcanvas-vacant-positions {
+  &__list {
+    margin-top: 15px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 15px;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      display: block;
+      width: 22px;
+      height: 22px;
+      color: var(--color-black);
+    }
+  }
+
+  &__title {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--color-black);
+  }
+
+  &__description {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-text-muted);
+  }
+}

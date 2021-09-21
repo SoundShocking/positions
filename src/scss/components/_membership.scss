@@ -2,6 +2,11 @@
   padding: 100px 0 140px;
   background-color: var(--color-grape);
   position: relative;
+  scroll-margin-top: 75px;
+
+  @include md {
+    padding: 50px 0 100px;
+  }
 
   &::after {
     content: '';
@@ -12,6 +17,10 @@
     height: 80px;
     background: url('../img/rectangle-bottom-shape.svg') bottom center no-repeat /
       cover;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__container {
@@ -30,6 +39,10 @@
   background-color: var(--color-white);
   padding-bottom: 150px;
 
+  @include md {
+    padding-bottom: 50px;
+  }
+
   &__container {
   }
 
@@ -40,6 +53,11 @@
     margin-top: -75px;
     position: relative;
     z-index: 1;
+
+    @include sm {
+      grid-template-columns: 1fr;
+      margin-top: -50px;
+    }
   }
 
   &__item {
@@ -54,6 +72,10 @@
   border: 1px solid var(--color-gray);
   background-color: var(--color-white);
 
+  @include sm {
+    padding: 20px 15px;
+  }
+
   &__title {
     font-size: 20px;
     line-height: 1;
@@ -67,12 +89,16 @@
     line-height: 1;
     font-weight: 700;
     color: var(--color-black);
+
+    @include sm {
+      font-size: 36px;
+    }
   }
 
   &__description {
     margin-top: 32px;
     font-size: 16px;
-    font-weight: 500px;
+    font-weight: 500;
     line-height: 24px;
     color: var(--color-text-muted);
   }
@@ -107,6 +133,10 @@
   position: relative;
   padding-top: 100px;
 
+  @include sm {
+    padding-top: 50px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -116,6 +146,10 @@
     height: 80px;
     background: url('../img/rectangle-top-shape.svg') bottom center no-repeat /
       cover;
+
+    @include sm {
+      display: none;
+    }
   }
 
   &__container {
@@ -129,6 +163,10 @@
     margin: 0 auto 0;
     max-width: 500px;
     text-align: center;
+
+    @include sm {
+      line-height: 1.3;
+    }
   }
 
   &__grid {
@@ -136,12 +174,26 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+
+    @include md {
+      margin-top: 50px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      margin-top: 40px;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
     padding: 32px;
     border-radius: 4px;
     background-color: var(--color-white);
+
+    @include sm {
+      padding: 20px 15px;
+    }
   }
 
   &__icon {
@@ -163,11 +215,20 @@
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
+
+    @include sm {
+      margin-top: 20px;
+    }
   }
 }
 
 .faq {
   margin-top: 80px;
+  scroll-margin-top: 75px;
+
+  @include md {
+    margin-top: 50px;
+  }
 
   &__container {
   }
@@ -179,6 +240,10 @@
     margin: 0 auto;
     max-width: 500px;
     text-align: center;
+
+    @include sm {
+      line-height: 1.3;
+    }
   }
 
   &__subtitle {
@@ -195,6 +260,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+
+    @include md {
+      margin-top: 40px;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__question {
@@ -208,5 +281,33 @@
     margin-top: 8px;
     line-height: 24px;
     color: var(--color-text-muted);
+  }
+
+  &__link {
+    height: 55px;
+    line-height: 55px;
+    display: block;
+    margin: 80px auto 0;
+    color: var(--color-black);
+    background-color: #f6bd30;
+    text-align: center;
+    font-size: 18px;
+    max-width: 50%;
+    font-weight: 700;
+    transition: background 0.3s;
+    border-radius: 4px;
+
+    @include lg {
+      margin-top: 50px;
+    }
+
+    @include md {
+      max-width: none;
+      margin-top: 40px;
+    }
+
+    &:hover {
+      background-color: #e9a90a;
+    }
   }
 }

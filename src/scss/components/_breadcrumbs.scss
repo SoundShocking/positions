@@ -2,11 +2,17 @@
   background-color: var(--color-haiti);
   padding: 32px 0;
 
+  @include md {
+    padding: 20px 0;
+  }
+
   &__container {
   }
 
   &__list {
     display: flex;
+    overflow-y: scroll;
+    scrollbar-width: none;
   }
 
   &__item {
@@ -34,6 +40,7 @@
   &__link {
     color: var(--color-white);
     font-weight: 600;
+    white-space: nowrap;
 
     &:hover {
       color: #ccccd1;
