@@ -1,3 +1,53 @@
+.institutions-hero {
+  background-color: var(--color-grape);
+  padding: 60px 0;
+
+  @include md {
+    padding: 40px 0;
+  }
+
+  &__container {
+  }
+
+  &__content {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 60px;
+    color: var(--color-white);
+    margin: 0;
+
+    @include md {
+      font-size: 48px;
+      line-height: 1.3;
+    }
+
+    @include sm {
+      font-size: 32px;
+      line-height: 1.4;
+    }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+    color: var(--color-white);
+    text-align: center;
+    margin-top: 16px;
+
+    @include sm {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}
+
 .institutions {
   padding: 96px 0;
 
