@@ -108,6 +108,8 @@
 }
 
 .positions-filter {
+  $self: &;
+
   padding: 20px;
   border: 1px solid #eae9ec;
   background-color: var(--color-white);
@@ -149,6 +151,52 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 8px;
+  }
+
+  &__checkbox {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &__input {
+    &:checked + #{$self}__text {
+      &::before {
+        background-color: var(--color-outrageous-orange);
+        border-color: var(--color-outrageous-orange);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background: url('../img/check-solid--white.svg') center center no-repeat;
+        background-size: 10px;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 26px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: 0;
+      border: 1px solid #bbb9cc;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
   }
 }
 
