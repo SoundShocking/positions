@@ -49,7 +49,11 @@
 }
 
 .institutions {
-  padding: 96px 0;
+  margin-top: 60px;
+
+  @include sm {
+    margin-top: 40px;
+  }
 
   &__container {
   }
@@ -58,6 +62,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include sm {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__title {
@@ -71,6 +80,10 @@
     display: flex;
     align-items: center;
     white-space: nowrap;
+
+    @include sm {
+      margin-top: 20px;
+    }
   }
 
   &__select {
@@ -100,14 +113,24 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     align-items: start;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: 100%;
+    }
   }
 
   &__item {
-    border-radius: 4px;
-    background-color: var(--color-white);
+    // border-radius: 4px;
+    // background-color: var(--color-white);
   }
 
   &__image {
+    border-radius: 4px 4px 0 0;
+
     img {
       display: block;
       height: auto;
@@ -119,6 +142,12 @@
     border-color: var(--color-gray);
     border-style: solid;
     padding: 32px;
+    background-color: var(--color-white);
+    border-radius: 0 0 4px 4px;
+
+    @include sm {
+      padding: 20px 15px;
+    }
   }
 
   &__name {
